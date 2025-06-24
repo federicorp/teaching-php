@@ -8,6 +8,8 @@ $variable = "Hola Mundo";
 $numero = 10;
 $numeroUnario = -$numero; // Negación
 
+
+// Imprimir resultados
 echo $numero;
 echo "<br>";
 echo $numeroUnario;
@@ -38,13 +40,23 @@ $menorQue = 3 < 7; // Menor que
 $mayorIgual = 5 >= 5; // Mayor o igual que
 $menorIgual = 3 <= 4; // Menor o igual que
 
+
+// Caso de falso positivo y como evitarlo
 $valorFalso = false;
 $valorFalsoPositivo = 0;
 
-if ($valorFalso === $valorFalsoPositivo) {
+// Falso positivo: Comparar un valor falso con 0
+if ($valorFalso == $valorFalsoPositivo) {
     echo "Los valores son iguales<br>";
 } else {
     echo "Los valores son diferentes<br>";
+}
+
+// Comparación estricta (tipo y valor)
+if ($valorFalso === $valorFalsoPositivo) {
+    echo "Los valores son estrictamente iguales<br>";
+} else {
+    echo "Los valores son estrictamente diferentes<br>";
 }
 
 
